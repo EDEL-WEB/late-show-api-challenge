@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# SQLite or backup DBs
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+
+# Pipenv
+Pipfile.lock
+
+# Flask-Migrate
+migrations/
+
+# VS Code and editor junk
+.vscode/
+*.swp
+.DS_Store
