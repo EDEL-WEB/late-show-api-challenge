@@ -10,32 +10,32 @@ app = create_app()
 with app.app_context():
     print(" Seeding database...")
 
-    # Clear existing data
+
     Appearance.query.delete()
     Guest.query.delete()
     Episode.query.delete()
     User.query.delete()
 
-    # Create a test user
+    
     user = User(username="admin")
     user.set_password("password")
     db.session.add(user)
 
-    # Create some guests
+    
     guest1 = Guest(name="Trevor Noah", occupation="Comedian")
     guest2 = Guest(name="Zendaya", occupation="Actress")
     guest3 = Guest(name="Bill Gates", occupation="Philanthropist")
 
     db.session.add_all([guest1, guest2, guest3])
 
-    # Create some episodes
+
     episode1 = Episode(date=date(2025, 6, 1), number=1)
     episode2 = Episode(date=date(2025, 6, 2), number=2)
 
     db.session.add_all([episode1, episode2])
-    db.session.flush()  # To get their IDs
+    db.session.flush()  
 
-    # Create appearances
+
     a1 = Appearance(rating=5, guest_id=guest1.id, episode_id=episode1.id)
     a2 = Appearance(rating=4, guest_id=guest2.id, episode_id=episode1.id)
     a3 = Appearance(rating=3, guest_id=guest3.id, episode_id=episode2.id)

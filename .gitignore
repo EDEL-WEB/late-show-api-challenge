@@ -1,4 +1,4 @@
-# Python cache
+
 __pycache__/
 *.pyc
 
@@ -19,3 +19,4 @@ migrations/
 .vscode/
 *.swp
 .DS_Store
+.env

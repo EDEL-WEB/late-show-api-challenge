@@ -1,9 +1,9 @@
 from dotenv import load_dotenv
-load_dotenv()  # <-- Add this at the very top
+load_dotenv()  
 
 import os
 
-print("Loaded DATABASE_URI:", os.getenv('DATABASE_URI'))  # Debug print
+print("Loaded DATABASE_URI:", os.getenv('DATABASE_URI'))  
 
 class Config:
     SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URI')

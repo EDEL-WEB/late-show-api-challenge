@@ -7,7 +7,7 @@ class Episode(db.Model):
     date = db.Column(db.Date, nullable=False)
     number = db.Column(db.Integer, nullable=False)
 
-    # Relationship to appearances
+    
     appearances = db.relationship(
         'Appearance',
         back_populates='episode',
